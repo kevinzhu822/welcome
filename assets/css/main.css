@@ -3192,14 +3192,14 @@ input, select, textarea {
 				font-size: 2.5em;
 			}
 
-				header.major h2 + p {
+				header.major h2 + p + p {
 					font-size: 1.5em;
 				}
 
 		/* Features */
 
 			.features article .image {
-				display: block;
+				display: block; !important
 				margin: 0 0 2.25em 0;
 				padding-right: 0;
 				width: 100%;
