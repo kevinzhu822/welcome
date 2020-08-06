@@ -3350,3 +3350,11 @@ input, select, textarea {
 			}
 
 	}
+
+
+
+	.countdown{
+		font-size: 64px;
+		font-weight: bold;
+		color:black;
+	}
