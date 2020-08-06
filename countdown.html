@@ -16,12 +16,17 @@
             <p></p>
             <h3 style="padding-bottom: 45px;">Cleo's Countdown</h3>
             <div style="text-align: center;">
-            	<span class="countdown" style="white-space: nowrap; font-size:5vw;"id="countdown"></span>
+              <br>
+            <br>
+            <br>
+            	<span class="countdown" style="white-space: nowrap; "id="countdown"></span>
+              <br>
+              <span class="countdownLabels">Days &nbsp;Hours &nbsp;Min &nbsp;Sec</span>
             </div>
-            <p></p>
-        	<p></p>
-        	<p></p>
-            <p></p>
+            <br>
+            <br>
+            <br>
+            <br>
             <a href="index.html" class="button primary fit small">Go Back</a>
         </div>
 
@@ -45,8 +50,8 @@
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
       // Output the result in an element with id="demo"
-      document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
+      document.getElementById("countdown").innerHTML = days + " : " + hours + " : "
+      + minutes + " : " + seconds + "";
         
       // If the count down is over, write some text 
       if (distance < 0) {

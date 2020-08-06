@@ -3391,7 +3391,13 @@ input, select, textarea {
 
 
 	.countdown{
-		font-size: 64px;
+		font-size:5vw;
 		font-weight: bold;
 		color: #000000;
+	}
+
+	.countdownLabels{
+		font-size:3vw;
+		font-weight: bold;
+		color: rgb(grey);
 	}
