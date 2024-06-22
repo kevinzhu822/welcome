@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Cleo's Countdown</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+
+	<body class="is-preload">
+        <div class="container">
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <h3 style="padding-bottom: 45px;">Cleo's Countdown</h3>
+            <div style="text-align: center;">
+              <br>
+            <br>
+            <br>
+            	<span class="countdown" style="white-space: nowrap; "id="countdown"></span>
+              <br>
+              <span class="countdownLabels">Days &nbsp;Hours &nbsp;Min &nbsp;Sec</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <a href="index.html" class="button primary fit small">Go Back</a>
+        </div>
+
+
+    <script>
+    var countDownDate = new Date("Jul 5, 2021 17:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("countdown").innerHTML = days + " : " + hours + " : "
+      + minutes + " : " + seconds + "";
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "YAY";
+      }
+    }, 1000);
+
+
+    </script>
+    </body>
+
+</html>

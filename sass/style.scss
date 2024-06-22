@@ -1,5 +1,5 @@
 $font-primary: 'Space Mono', Arial, serif;
-$font-secondary: 'Kaushan Script', cursive;
+$font-secondary: 'Roboto Slab', serif;
 
 
 
@@ -8,7 +8,8 @@ $grid-gutter-width: 40px !default;
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
-$brand-primary: #FF9000 !default;
+$brand-primary: #3891f0 !default;
+$brand-dark: #27ae60;
 
 $brand-white: #fff;
 $brand-black: #000;
@@ -20,10 +21,15 @@ $brand-selection-color: #f9f6f0;
 $brand-overlay-color: #4c4a8a;
 $brand-bg-color: $brand-white;
 
+
 $brand-bg-dark: #2F3C4F;
 
 $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
+
+$dark-bg-color: #000000e2; /* Dark background color */
+$dark-blue: #001f3f; /* Dark blue color */
+$mid-blue: lighten($dark-blue, 5%);
 
 
 
@@ -204,39 +210,34 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 		h1 {
 			font-family: $font-secondary;
-			margin-bottom: 30px;
+			margin-bottom: 10px;
 			font-size: 50px;
 			line-height: 1.3;
 			font-weight: 300;
-			-webkit-transform: rotate(-5deg);
-			-moz-transform: rotate(-5deg);
-			-ms-transform: rotate(-5deg);
-			-o-transform: rotate(-5deg);
-			transform: rotate(-5deg);
-			span{
-				padding: 4px 15px;
-				position: relative;
-				&:before{
-					position: absolute;
-					top: 40px;
-					left: 0;
-					width: 30px;
-					height: 4px;
-					content: '';
-					background: $brand-white;
-					margin-left: -30px;
-				}
-				&:after{
-					position: absolute;
-					top: 40px;
-					right: 0;
-					width: 30px;
-					height: 4px;
-					content: '';
-					background: $brand-white;
-					margin-right: -30px;
-				}
-			}
+			// span{
+			// 	padding: 4px 15px;
+			// 	position: relative;
+			// 	// &:before{
+			// 	// 	position: absolute;
+			// 	// 	top: 40px;
+			// 	// 	left: 0;
+			// 	// 	width: 30px;
+			// 	// 	height: 4px;
+			// 	// 	content: '';
+			// 	// 	background: $brand-white;
+			// 	// 	margin-left: -30px;
+			// 	// }
+			// 	// &:after{
+			// 	// 	position: absolute;
+			// 	// 	top: 40px;
+			// 	// 	right: 0;
+			// 	// 	width: 30px;
+			// 	// 	height: 4px;
+			// 	// 	content: '';
+			// 	// 	background: $brand-white;
+			// 	// 	margin-right: -30px;
+			// 	// }
+			// }
 			@media screen and (max-width: $screen-sm) {
 				font-size: 34px;
 				span{
@@ -261,7 +262,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			margin-bottom: 30px;
 		}
 		h3{
-			font-size: 16px;
+			font-size: 18px;
 			@media screen and (max-width: $screen-sm) {
 				font-size: 14px;
 			}
@@ -282,15 +283,63 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 		.fh5co-social-icons {
 			li {
-				a {
-					color: $brand-white;
-					i {
-						font-size: 30px;
-					}
+			  position: relative; /* Add this line to position tooltips correctly */
+			  a {
+				color: $brand-white;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				
+				i {
+				  font-size: 30px;
 				}
+		  
+				.tooltip {
+				  visibility: hidden;
+				  opacity: 0;
+				  background-color: rgba(0, 0, 0, 0.8);
+				  color: #fff;
+				  text-align: center;
+				  border-radius: 4px;
+				  padding: 5px 10px;
+				  position: absolute;
+				  z-index: 1;
+				  bottom: 100%; /* Position the tooltip above the icon */
+				  left: 50%;
+				  transform: translateX(-50%);
+				  transition: opacity 0.3s, bottom 0.3s;
+				}
+		  
+				.tooltip::after {
+				  content: "";
+				  position: absolute;
+				  top: 100%; /* Arrow at the bottom */
+				  left: 50%;
+				  margin-left: -5px;
+				  border-width: 5px;
+				  border-style: solid;
+				  border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+				}
+		  
+				&:hover .tooltip {
+				  visibility: visible;
+				  opacity: 1;
+				  bottom: 110%; /* Slightly move the tooltip up on hover */
+				}
+			  }
 			}
-		}
+		  }
 	}
+	.dark-mode-toggle {
+		position: absolute;
+		top: 20px; /* Adjust the value as needed */
+		right: 20px; /* Adjust the value as needed */
+		display: flex;
+		align-items: center;
+	}
+	
 }
 
 
@@ -750,10 +799,10 @@ h1, h2, h3, h4, h5, h6, figure {
 	width: 100%;
 	display: table;
 	overflow: hidden;
-	@media screen and(max-width: $screen-sm){
+	@media screen and (max-width: $screen-sm){
 		height: 400px;
 	}
-	@media screen and(max-width: $screen-xs){
+	@media screen and (max-width: $screen-xs){
 		height: 270px;
 	}	
 	.desc{
@@ -779,7 +828,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			-webkit-transform: translate3d(0, 15px, 0);
 			transform: translate3d(0, 15px, 0);
 		}
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			opacity: 1;
 			background: rgba($brand-white,.6);
 			h3{
@@ -857,10 +906,10 @@ h1, h2, h3, h4, h5, h6, figure {
 		background-repeat: no-repeat;
 		position: relative;
 		height: 300px;
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			height: 400px;
 		}
-		@media screen and(max-width: $screen-xs){
+		@media screen and (max-width: $screen-xs){
 			height: 270px;
 		}
 	}
@@ -878,7 +927,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 		@include transition(.3s);
 
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			padding: 10px;
 		}
 
@@ -897,7 +946,7 @@ h1, h2, h3, h4, h5, h6, figure {
 				list-style: none;
 				display: inline-block;
 				margin-left: 10px;
-				@media screen and(max-width: $screen-sm){
+				@media screen and (max-width: $screen-sm){
 					font-size: 14px;
 				}
 				&:first-child{
@@ -952,14 +1001,14 @@ h1, h2, h3, h4, h5, h6, figure {
 		position: relative;
 		@include flex();
 		@include flexwrap();
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			display: none;
 		}
 	}
 	.choose{
 		width: 50%;
 		padding: 4em;
-		@media screen and(max-width: $screen-sm){
+		@media screen and (max-width: $screen-sm){
 			width: 100%;
 			padding: 4em 1em;
 		}
@@ -1071,7 +1120,7 @@ input[type="text"] {
 		width: 50px;
 		height: 50px;
 		display: table;
-		background: rgba(0,0,0,.8);
+		background: $brand-primary;
 		color: $brand-white;
 		text-align: center;
 		@include border-radius(50%);
@@ -1085,7 +1134,10 @@ input[type="text"] {
 			text-decoration: none;
 			outline: none;
 		}
-	}	
+	}
+	.icon-arrow-up22 {
+		color: white;
+	}
 }
 
 
@@ -1278,4 +1330,118 @@ input[type="text"] {
 	.js & {
 		opacity: 0;
 	}
+}
+
+
+body {
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: black;
+    background: #fff;
+
+    &.dark {
+        background: $dark-bg-color;
+        color: #fff !important;
+
+        #fh5co-header,
+        .fh5co-cover {
+            background-color: transparent;
+            background-size: cover;
+            background-attachment: fixed;
+            position: relative;
+            height: 600px;
+            width: 100%;
+            .overlay {
+                background: $mid-blue;
+            }
+        }
+
+        a {
+            color: $dark-blue;
+            &:hover, &:active, &:focus {
+                color: lighten($dark-blue, 20%);
+            }
+        }
+
+        .fh5co-social-icons li a {
+            color: lighten($dark-blue, 20%);
+        }
+
+        .fh5co-social-icons li a:hover {
+            color: $dark-blue;
+        }
+
+		#fh5co-about .first-block {
+			color: lighten($mid-blue, 20%) !important
+		}
+
+		#fh5co-about .second-block {
+			color: #fff !important
+		}
+
+		.fh5co-heading h2 {
+			color: #fff
+		}
+
+		#fh5co-about h2 {
+			color: #fff
+		}
+
+		#fh5co-resume .timeline-title {
+			color: #fff
+		}
+
+		.timeline li .timeline-badge {
+			background-color: $mid-blue;
+		}
+		
+		.gototop a {
+			background-color: $mid-blue;
+		}
+		
+    }
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background: lighten($brand-primary, 10%) ;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-moon2 {color: #fff;}
+
+.icon-sun2 {color: yellow;}
+
+.checkbox-label .ball {
+  background-color: #fff;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+  transform: translateX(24px);
+}
+
+
+.checkbox:checked + .checkbox-label {
+	background: darken($brand-bg-dark, 15%) ;
 }

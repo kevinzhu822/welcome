@@ -134,6 +134,15 @@
 		$(".fh5co-loader").fadeOut("slow");
 	};
 
+	// dark from init	
+	const checkbox = document.getElementById("checkbox")
+	document.body.classList.add("dark");
+
+
+	checkbox.addEventListener("change", () => {
+		document.body.classList.toggle("dark")
+	})
+
 	
 	$(function(){
 		contentWayPoint();
