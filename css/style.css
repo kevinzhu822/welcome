@@ -1383,6 +1383,7 @@ body.dark .gototop a {
   width: 24px;
   height: 24px;
   margin: 0px auto;
+  pointer-events: auto !important;
 }
 
 .chevron {
