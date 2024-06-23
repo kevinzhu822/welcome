@@ -198,6 +198,8 @@ h1, h2, h3, h4, h5, h6, figure {
 		left: 0;
 		right: 0;
 		background: rgba($brand-primary,.9);
+		z-index: 1; /* Make sure it's behind the overlay content */
+		overflow: hidden; /* Ensure particles are contained */
 	}
 	.display-t{
 		width: 100%;
@@ -284,8 +286,10 @@ h1, h2, h3, h4, h5, h6, figure {
 			margin-bottom: 30px;
 			// border: 1px solid rgba($brand-white,1);
 			@include border-radius(50%);
+			pointer-events: none; /* Ensure particles are not blocking interactions */
 		}
 		.fh5co-social-icons {
+			pointer-events: auto; /* Ensure the icons are interactive */
 			li {
 			  position: relative; /* Add this line to position tooltips correctly */
 			  a {
@@ -1497,4 +1501,20 @@ to {
 
 html {
 	scroll-behavior: smooth;
+	}
+
+#particles-js {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	// z-index:  1; /* Lower z-index for particles */
+	}
+	
+	#fh5co-header .container {
+	position: relative;
+	z-index: 2; /* Higher z-index for main content */
+	pointer-events: none;
+
 	}

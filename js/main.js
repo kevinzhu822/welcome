@@ -143,12 +143,13 @@
 		document.body.classList.toggle("dark")
 	})
 
-	checkbox.addEventListener("touchstart", () => {
-		checkbox.checked = !checkbox.checked;
-		document.body.classList.toggle("dark");
+	document.addEventListener('DOMContentLoaded', function () {
+		particlesJS.load('particles-js', 'assets/particles.json', function() {
+		  console.log('callback - particles.js config loaded');
+		});
 	});
-
 	
+
 	$(function(){
 		contentWayPoint();
 		goToTop();
