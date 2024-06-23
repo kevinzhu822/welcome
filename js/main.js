@@ -143,6 +143,11 @@
 		document.body.classList.toggle("dark")
 	})
 
+	checkbox.addEventListener("touchstart", () => {
+		checkbox.checked = !checkbox.checked;
+		document.body.classList.toggle("dark");
+	});
+
 	
 	$(function(){
 		contentWayPoint();
