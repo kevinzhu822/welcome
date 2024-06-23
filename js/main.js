@@ -134,21 +134,39 @@
 		$(".fh5co-loader").fadeOut("slow");
 	};
 
-	// dark from init	
-	const checkbox = document.getElementById("checkbox")
+	const checkbox = document.getElementById("checkbox");
 	document.body.classList.add("dark");
 
+	// Function to load particles configuration with a cache buster
+	function loadParticlesConfig(configPath) {
+		const timestamp = new Date().getTime();
+		const configPathWithCacheBuster = `${configPath}?v=${timestamp}`;
+		particlesJS.load('particles-js', configPathWithCacheBuster, function() {
+			console.log('callback - particles.js config loaded');
+		});
+	}
+
+	// Initial load with dark mode particles configuration
+	loadParticlesConfig('assets/particles.json');
 
 	checkbox.addEventListener("change", () => {
-		document.body.classList.toggle("dark")
-	})
+		document.body.classList.toggle("dark");
+
+		if (document.body.classList.contains("dark")) {
+			loadParticlesConfig('assets/particles.json');
+		} else {
+			loadParticlesConfig('assets/particles-lightmode.json');
+		}
+	});
 
 	document.addEventListener('DOMContentLoaded', function () {
-		particlesJS.load('particles-js', 'assets/particles.json', function() {
-		  console.log('callback - particles.js config loaded');
-		});
+		if (document.body.classList.contains("dark")) {
+			loadParticlesConfig('assets/particles.json');
+		} else {
+			loadParticlesConfig('assets/particles-lightmode.json');
+		}
 	});
-	
+		
 
 	$(function(){
 		contentWayPoint();

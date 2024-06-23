@@ -1305,7 +1305,7 @@ body.dark a:hover, body.dark a:active, body.dark a:focus {
   color: #0051a5;
 }
 body.dark .fh5co-social-icons li a {
-  color: #0051a5;
+  color: white;
 }
 body.dark .fh5co-social-icons li a:hover {
   color: #001f3f;
