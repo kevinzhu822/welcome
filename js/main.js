@@ -147,7 +147,7 @@
 			.loadJSON("particles-js", configPath)
 			.then((container) => {
 				console.log("callback - tsparticles config loaded");
-				console.log('100 - 500')
+				console.log('50 - 500')
 			})
 			.catch((error) => {
 				console.error(error);
