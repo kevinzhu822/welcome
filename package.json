@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "tsparticles": "^1.43.1"
+  },
+  "scripts": {
+    "build": "rm -rf dist && mkdir dist && rsync -rv * dist --exclude ./dist"
   }
 }
