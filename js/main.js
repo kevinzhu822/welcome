@@ -137,13 +137,20 @@
 	const checkbox = document.getElementById("checkbox");
 	document.body.classList.add("dark");
 
+
 	// Function to load particles configuration with a cache buster
 	function loadParticlesConfig(configPath) {
 		const timestamp = new Date().getTime();
 		const configPathWithCacheBuster = `${configPath}?v=${timestamp}`;
-		particlesJS.load('particles-js', configPathWithCacheBuster, function() {
-			console.log('callback - particles.js config loaded');
-		});
+		
+		tsParticles
+			.loadJSON("particles-js", configPath)
+			.then((container) => {
+				console.log("callback - tsparticles config loaded");
+			})
+			.catch((error) => {
+				console.error(error);
+			});
 	}
 
 	// Initial load with dark mode particles configuration

@@ -340,7 +340,6 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .fh5co-bg-dark {
   background: #2F3C4F;
-  background: #3891f0;
 }
 .fh5co-bg-dark .fh5co-heading h2 {
   color: #fff !important;
@@ -1282,7 +1281,7 @@ body {
   background: #fff;
 }
 body.dark {
-  background: rgba(0, 0, 0, 0.8862745098);
+  background: rgba(0, 0, 0, 0.886) !important;
   color: #fff !important;
 }
 body.dark #fh5co-header,
@@ -1327,6 +1326,13 @@ body.dark #fh5co-resume .timeline-title {
 }
 body.dark .timeline li .timeline-badge {
   background-color: #002c59;
+}
+body.dark #fh5co-work {
+  background-color: #002c59;
+}
+body.dark .fh5co-bg-dark {
+  background: #002c59;
+  color: #fff;
 }
 body.dark .gototop a {
   background-color: #002c59;
@@ -1473,7 +1479,7 @@ html {
 }
 
 #particles-js {
-  position: absolute;
+  position: absolute !important;
   width: 100%;
   height: 100%;
   top: 0;

@@ -27,7 +27,7 @@ $brand-bg-dark: #2F3C4F;
 $input-border-focus:  $brand-primary !default;
 $form-group-margin-bottom:       30px !default;
 
-$dark-bg-color: #000000e2; /* Dark background color */
+$dark-bg-color: rgba(0, 0, 0, 0.886); /* Dark background color */
 $dark-blue: #001f3f; /* Dark blue color */
 $mid-blue: lighten($dark-blue, 5%);
 
@@ -423,13 +423,9 @@ h1, h2, h3, h4, h5, h6, figure {
 	border-bottom: none;
 }
 
-.fh5co-bg-color{
-	// background: #233142;
-
-}
 .fh5co-bg-dark{
 	background: $brand-bg-dark;
-	background: $brand-primary;
+	// background: $brand-primary;
 	.fh5co-heading{
 		h2{
 			color: $brand-white !important;
@@ -1303,7 +1299,7 @@ body {
     background: #fff;
 
     &.dark {
-        background: $dark-bg-color;
+        background: $dark-bg-color !important;
         color: #fff !important;
 
         #fh5co-header,
@@ -1358,6 +1354,14 @@ body {
 			background-color: $mid-blue;
 		}
 		
+		#fh5co-work {
+			background-color: $mid-blue;
+		}
+		
+		.fh5co-bg-dark {
+			background: $mid-blue;
+			color: #fff;
+		}
 		.gototop a {
 			background-color: $mid-blue;
 		}
@@ -1505,7 +1509,7 @@ html {
 	}
 
 #particles-js {
-	position: absolute;
+	position: absolute !important;
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -1519,3 +1523,8 @@ html {
 	pointer-events: none;
 
 	}
+
+	
+	
+	
+	
