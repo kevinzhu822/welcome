@@ -50,11 +50,16 @@
         "distance": 150,
         "color": "#000000",
         "opacity": 0.75,
-        "width": 1.5
+        "width": 1.5,
+        "triangles": {
+          "enable": true,
+          "color": "#000000",
+          "opacity": 0.005
+        }
       },
       "move": {
         "enable": true,
-        "speed": 2,
+        "speed": 0.8,
         "direction": "none",
         "random": false,
         "straight": false,
@@ -72,11 +77,11 @@
       "events": {
         "onhover": {
           "enable": true,
-          "mode": "grab"
+          "mode": "repulse"
         },
         "onclick": {
           "enable": true,
-          "mode": "push"
+          "mode": "repulse"
         },
         "resize": true
       },
@@ -95,7 +100,7 @@
           "speed": 3
         },
         "repulse": {
-          "distance": 200,
+          "distance": 125,
           "duration": 0.4
         },
         "push": {
@@ -106,5 +111,8 @@
         }
       }
     },
-    "retina_detect": true
+    "retina_detect": true,
+    "fullScreen": {
+      "enable" : false
+    }
   }
