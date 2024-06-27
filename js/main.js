@@ -147,14 +147,12 @@
 			.loadJSON("particles-js", configPath)
 			.then((container) => {
 				console.log("callback - tsparticles config loaded");
+				console.log('100 - 500')
 			})
 			.catch((error) => {
 				console.error(error);
 			});
 	}
-
-	// Initial load with dark mode particles configuration
-	loadParticlesConfig('assets/particles.json');
 
 	checkbox.addEventListener("change", () => {
 		document.body.classList.toggle("dark");
