@@ -212,7 +212,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		h1, h2, h3 {
 			margin: 0;
 			padding: 0;
-			color: rgba(255,255,255,1);
+			color: $brand-black;
 		}
 		h1 {
 			font-family: $font-secondary;
@@ -293,7 +293,7 @@ h1, h2, h3, h4, h5, h6, figure {
 			li {
 			  position: relative; /* Add this line to position tooltips correctly */
 			  a {
-				color: $brand-white;
+				color: $brand-black;
 				text-decoration: none;
 				display: flex;
 				align-items: center;
@@ -1295,12 +1295,16 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.7;
-    color: black;
+    color: #fff;
     background: #fff;
 
     &.dark {
-        background: $dark-bg-color !important;
-        color: #fff !important;
+        background: $dark-bg-color;
+        color: #fff;
+
+		.display-tc {
+			color: #fff;
+		}
 
         #fh5co-header,
         .fh5co-cover {
@@ -1315,15 +1319,20 @@ body {
             }
         }
 
+		h1, h2, h3 {
+			color: #fff !important;
+		}
+
         a {
             color: $dark-blue;
             &:hover, &:active, &:focus {
                 color: lighten($dark-blue, 20%);
             }
+			
         }
 
         .fh5co-social-icons li a {
-            color: white;
+            color: white !important;
         }
 
         .fh5co-social-icons li a:hover {
@@ -1413,7 +1422,7 @@ body {
 
 .arrow_container {
 	position: relative;
-	top: 100px;
+	top: 16%;
 	width: 24px;
 	height: 24px;
 	margin: 0px auto;
