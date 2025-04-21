@@ -834,13 +834,16 @@
 				
 				// Update particle positions
 				particles.forEach(particle => {
-					// Update position
+					// Update position with normal movement
 					particle.x += particle.vx;
 					particle.y += particle.vy;
 					
-					// Bounce off edges
-					if (particle.x < 0 || particle.x > 100) particle.vx *= -1;
-					if (particle.y < 0 || particle.y > 100) particle.vy *= -1;
+					// Allow particles to leave the container and wrap around (instead of bouncing)
+					// This helps prevent crowding on smaller screens
+					if (particle.x < -5) particle.x = 105;
+					if (particle.x > 105) particle.x = -5;
+					if (particle.y < -5) particle.y = 105;
+					if (particle.y > 105) particle.y = -5;
 					
 					// Apply position
 					particle.element.style.left = particle.x + '%';
