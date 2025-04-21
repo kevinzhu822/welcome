@@ -751,9 +751,10 @@
 				
 				// Adjust particles density based on section
 				let particleCount;
+				
 				if (container.closest('#fh5co-about')) {
-					// Higher density for the About Me section (top content section)
-					particleCount = Math.min(80, Math.max(30, Math.floor(containerArea / 8000))); // Keep higher density for About Me
+					// Moderate density for About Me section
+					particleCount = Math.min(35, Math.max(20, Math.floor(containerArea / 15000))); // Slightly increased density for About Me
 				} else if (container.closest('#fh5co-started')) {
 					// Fewer particles for Let's Connect section
 					particleCount = Math.min(30, Math.max(15, Math.floor(containerArea / 25000))); // Lower density for Let's Connect
@@ -863,11 +864,11 @@
 						const distance = Math.sqrt(dx * dx + dy * dy);
 						
 						// Different connection distances for different sections
-						let maxDistance = 250; // Default (reduced from 300)
+						let maxDistance = 250; // Default distance
 						
 						// Section-specific connection distances
 						if (container.closest('#fh5co-about')) {
-							maxDistance = 280; // Longer connections in About Me section
+							maxDistance = 200; // Slightly increased connections for About Me section
 						} else if (container.closest('#fh5co-footer')) {
 							maxDistance = 120; // Much shorter connections in footer
 						}
