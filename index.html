@@ -34,6 +34,7 @@
 	<meta name="twitter:url" content="" />
 	<meta name="twitter:card" content="" />
 
+	<link href="https://fonts.googleapis.com/css?family=Inter:400,700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
 	
@@ -59,6 +60,134 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
 	<link rel="manifest" href="assets/site.webmanifest">
+
+	<style>
+	.timeline-title {
+	  font-size: 19px;
+	  line-height: 1.3;
+	  margin-bottom: 5px;
+	  font-weight: 700;
+	  color: #3891f0;
+	}
+
+	/* Simple, clean bullet points with no positioning complications */
+	.timeline-body ul {
+	  list-style-type: disc;
+	  padding-left: 20px;
+	  margin-bottom: 0;
+	}
+	
+	.timeline-body li {
+	  margin-bottom: 8px;
+	}
+	
+	/* For right-aligned timeline entries */
+	.timeline-inverted .timeline-body ul {
+	  padding-left: 0;
+	  padding-right: 20px;
+	  list-style-position: inside;
+	}
+	
+	/* Alternating section colors */
+	.section-light {
+	  background-color: #fff;
+	}
+	
+	.section-dark {
+	  background-color: #f9f9f9;
+	}
+	
+	body.dark .section-light {
+	  background-color: #121a24;
+	}
+	
+	body.dark .section-dark {
+	  background-color: #0a1017;
+	}
+	
+	.contact-options {
+		margin-top: 30px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+	
+	.contact-options .btn {
+		margin: 0;
+		display: flex;
+		align-items: center;
+	}
+	
+	.contact-options .btn i {
+		margin-right: 8px;
+		font-size: 18px;
+	}
+	
+	/* Fix for Let's Connect section in light/dark modes */
+	#fh5co-started {
+		background-image: none !important; /* Remove any background image */
+		position: relative;
+		padding: 7em 0;
+	}
+	
+	#fh5co-started h2 {
+		color: #3891f0 !important;
+	}
+	
+	#fh5co-started p {
+		color: #666 !important;
+	}
+	
+	body.dark #fh5co-started h2 {
+		color: #3891f0 !important;
+	}
+	
+	body.dark #fh5co-started p {
+		color: #ccc !important;
+	}
+	
+	/* Particles for light sections */
+	.section-light, .section-dark {
+		position: relative;
+		overflow: hidden;
+	}
+	
+	.particles-light {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		pointer-events: none;
+	}
+	
+	.container {
+		position: relative;
+		z-index: 2;
+	}
+
+	/* Footer styling */
+	#fh5co-footer {
+		position: relative;
+		padding: 3em 0;
+		background-color: #f9f9f9 !important;
+	}
+	
+	#fh5co-footer p {
+		color: #666 !important;
+		text-align: center;
+	}
+	
+	body.dark #fh5co-footer {
+		background-color: #0a1017 !important;
+	}
+	
+	body.dark #fh5co-footer p {
+		color: #ccc !important;
+	}
+	</style>
 
 	</head>
 	<body>
@@ -118,7 +247,8 @@
 	</header>
 
 	<div id="toscroll">
-		<div id="fh5co-about" class="animate-box">
+		<div id="fh5co-about" class="animate-box section-light">
+			<div class="particles-light"></div>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -133,20 +263,25 @@
 							<li><span class="first-block">Location:</span><span class="second-block">New York City, USA</span></li>
 							<li><span class="first-block">Hometown:</span><span class="second-block">Vancouver, Canada</span></li>
 							<li><span class="first-block">University:</span><span class="second-block">UC Berkeley</span></li>
-							<li><span class="first-block">Favorite Restaurant:</span><span class="second-block">Ramen Danbo</span></li>
+							<li><span class="first-block">Favorite Food:</span><span class="second-block">Hot Pot</span></li>
 						</ul>
 					</div>
 					<div class="col-md-8">
-						<h2>Hello There!</h2>
-						<p>My name kevin and i am writing this sample text because i dont like the previous latin version.</p>
-						<p>Far far away, behind the word mountains, Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci there live the blind texts from the countries Vokalia and Consonantia, there live the blind texts. Quos quia provident consequuntur culpa facere ratione maxime commodi voluptates id repellat velit eaque aspernatur expedita. Possimus itaque adipisci.</p>
+						<h2>Hello!</h2>
+						<p>
+						  I'm <b>Kevin</b> — a <b>software engineer</b> with a love for <b>good food</b>, <b>photography</b>, and <b>exploring new places</b>. Originally from <b>Vancouver</b> and now based in <b>New York City</b>, I enjoy finding the balance between <b>technology</b> and <b>creativity</b> in my work and hobbies.
+						</p>
+						<p>
+						  When I'm not coding, I'm usually trying to keep up with my energetic cat <b>Yuzu</b>, experimenting with new <b>Chinese recipes</b>, or zipping through the city on my <b>electric skateboard</b>.
+						</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="fh5co-resume" class="fh5co-bg-color">
+	<div id="fh5co-resume" class="fh5co-bg-color section-dark">
+		<div class="particles-light"></div>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -155,19 +290,22 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 col-md-offset-0">
+					<div class="timeline-section-header text-center animate-box">
+						<h3>Work Experience</h3>
+					</div>
 					<ul class="timeline">
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Work Experience</h3></div>
-						</li>
 						<li class="animate-box timeline-unverted">
 							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">AI Engineer</h3>
-									<span class="company">Schonfeld | June 2023 - Present</span>
+									<h3 class="timeline-title">Senior Software Engineer - Applied AI</h3>
+									<span class="company">Schonfeld | January 2025 - Present</span>
 								</div>
 								<div class="timeline-body">
-									<p>AI AI AI AI AI AI AI AI.</p>
+									<p>Leading the expansion of our AI platform that now serves over 70% of the firm's employees daily</p>
+									<p>Built AI assistants that make me look smarter than I actually am by answering questions I'd otherwise Google</p>
+									<p>Conducting executive training sessions on AI implementation strategies and best practices</p>
+									<p>Created AI tools that do the hard work while I get to take credit for the insights</p>
 								</div>
 							</div>
 						</li>
@@ -175,23 +313,28 @@
 							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">Software Development Engineer I</h3>
+									<h3 class="timeline-title">Software Engineer - Applied AI</h3>
+									<span class="company">Schonfeld | June 2023 - January 2025</span>
+								</div>
+								<div class="timeline-body">
+									<p>Developed an enterprise-grade LLM-powered assistant with integrations to proprietary data sources</p>
+									<p>Automated workflows for colleagues who now think I'm a wizard, when really I just hate repetitive tasks</p>
+									<p>Pioneered function-calling AI systems that have become the foundation for firm-wide automation</p>
+									<p>Created dashboards to track AI performance because even I couldn't understand what was happening without visuals</p>
+								</div>
+							</div>
+						</li>
+						<li class="animate-box timeline-unverted">
+							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
+							<div class="timeline-panel">
+								<div class="timeline-heading">
+									<h3 class="timeline-title">Software Development Engineer I - EC2</h3>
 									<span class="company">Amazon Web Services | March 2022 - June 2023</span>
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-								</div>
-							</div>
-						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">Software Development Engineer Intern</h3>
-									<span class="company">Amazon Web Services | Summer 2021</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p>Upgraded cloud infrastructure while regularly panicking about potentially breaking the internet (thankfully didn't)</p>
+									<p>Led cross-functional effort to reduce server impairment recidivism, resulting in significant infrastructure efficiency gains</p>
+									<p>Fixed critical issues in maintenance alert systems affecting tens of thousands of instances</p>
 								</div>
 							</div>
 						</li>
@@ -199,11 +342,12 @@
 							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">Software Engineer Intern</h3>
-									<span class="company">Bill.com | June 2020 = January 2021</span>
+									<h3 class="timeline-title">Software Development Engineer Intern - EC2</h3>
+									<span class="company">Amazon Web Services | May 2021 - August 2021</span>
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p>Developed a server health analytics pipeline covering millions of EC2 instances with visualization tools</p>
+									<p>Automated server failure detection, mostly to avoid having to manually check them all (laziness is the mother of automation)</p>
 								</div>
 							</div>
 						</li>
@@ -211,43 +355,35 @@
 							<div class="timeline-badge"><i class="icon-suitcase"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">Engineering Intern</h3>
-									<span class="company">X-Matik | Summer 2019 </span>
+									<h3 class="timeline-title">Software Engineering Intern</h3>
+									<span class="company">Bill | June 2020 - January 2021</span>
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p>Designed web interfaces for financial software while struggling to balance my own bank account</p>
+									<p>Implemented backend Java services enabling fast and flexible filtering of customer data</p>
 								</div>
 							</div>
 						</li>
-						<br>
-						<li class="timeline-heading text-center animate-box">
-							<div><h3>Education</h3></div>
-						</li>
+					</ul>
+					<div class="timeline-section-header text-center animate-box">
+						<h3>Education</h3>
+					</div>
+					<ul class="timeline">
 						<li class="animate-box timeline-inverted">
 							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
 							<div class="timeline-panel">
 								<div class="timeline-heading">
-									<h3 class="timeline-title">BA - Computer Science</h3>
-									<span class="company">University of California, Berkeley | 2021</span>
+									<h3 class="timeline-title">Bachelor of Arts, Computer Science</h3>
+									<span class="company">University of California, Berkeley | 2018 - 2021</span>
 								</div>
 								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+									<p>Coursework in algorithms, artificial intelligence, machine learning, and software engineering</p>
+									<p>Built real-world projects with Codebase while somehow managing not to break production</p>
+									<p>Balanced dining hall shifts with debugging sessions, making me an expert at both serving spaghetti and untangling it</p>
 								</div>
 							</div>
 						</li>
-						<li class="animate-box timeline-unverted">
-							<div class="timeline-badge"><i class="icon-graduation-cap"></i></div>
-							<div class="timeline-panel">
-								<div class="timeline-heading">
-									<h3 class="timeline-title">IB Diploma</h3>
-									<span class="company">Semiahmoo Secondary School | 2018</span>
-								</div>
-								<div class="timeline-body">
-									<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-								</div>
-							</div>
-						</li>
-			    	</ul>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -451,6 +587,7 @@
 		</div>
 	</div> -->
 
+	<!-- Projects section hidden until content is ready 
 	<div id="fh5co-work" class="fh5co-bg-dark">
 		<div class="container">
 			<div class="row animate-box">
@@ -491,108 +628,23 @@
 						</div>
 					</a>
 				</div>
-				<!-- <div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-5.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Website</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-6.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-7.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Brading</span>
-						</div>
-					</a>
-				</div>
-				<div class="col-md-3 text-center col-padding animate-box">
-					<a href="#" class="work" style="background-image: url(images/portfolio-8.jpg);">
-						<div class="desc">
-							<h3>Project Name</h3>
-							<span>Illustration</span>
-						</div>
-					</a>
-				</div> -->
 			</div>
 		</div>
 	</div>
+	-->
 
-	<!-- <div id="fh5co-blog">
+	<div id="fh5co-started" class="section-light">
+		<div class="particles-light"></div>
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Post on Medium</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/portfolio-1.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">Mar. 15th 2016</span>
-							<h3><a href="#">Photoshoot On The Street</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>249</li>
-								<li><i class="icon-eye2"></i>308</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
+					<h2>Let's Connect!</h2>
+					<p>Interested in discussing AI projects, job opportunities, or just chatting about the latest in tech? Maybe you know where to find the best ramen? I'd love to connect!</p>
+					<div class="contact-options">
+						<a href="mailto:kevin@example.com" class="btn btn-primary btn-lg"><i class="icon-mail"></i> Email Me</a>
+						<a href="https://www.linkedin.com/in/kevinjzhu/" class="btn btn-primary btn-lg"><i class="icon-linkedin2"></i> LinkedIn</a>
+						<a href="resume.pdf" class="btn btn-primary btn-lg"><i class="icon-text-document"></i> Resume</a>
 					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/portfolio-2.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">Mar. 15th 2016</span>
-							<h3><a href="#">Surfing at Philippines</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>249</li>
-								<li><i class="icon-eye2"></i>308</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="fh5co-blog animate-box">
-						<a href="#" class="blog-bg" style="background-image: url(images/portfolio-3.jpg);"></a>
-						<div class="blog-text">
-							<span class="posted_on">Mar. 15th 2016</span>
-							<h3><a href="#">Capture Living On Uderwater</a></h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-							<ul class="stuff">
-								<li><i class="icon-heart2"></i>249</li>
-								<li><i class="icon-eye2"></i>308</li>
-								<li><a href="#">Read More<i class="icon-arrow-right22"></i></a></li>
-							</ul>
-						</div> 
-					</div>
-				</div>
-			</div>
-		</div>
-	</div> -->
-	
-	<div id="fh5co-started">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Contact Me!</h2>
-					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-					<p><a href="#" class="btn btn-default btn-lg">Contact Us</a></p>
 				</div>
 			</div>
 		</div>
@@ -600,6 +652,7 @@
 
 	
 	<div id="fh5co-footer" class="fh5co-bg-dark">
+		<div class="particles-light"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -628,6 +681,229 @@
 	
 	<!-- Main -->
 	<script src="js/main.js"></script>
+
+	<script>
+	// Convert paragraphs to list items
+	document.addEventListener('DOMContentLoaded', function() {
+	  const timelineBodies = document.querySelectorAll('.timeline-body');
+	  timelineBodies.forEach(body => {
+	    // Get all paragraphs
+	    const paragraphs = body.querySelectorAll('p');
+	    if (paragraphs.length) {
+	      // Create a new unordered list
+	      const ul = document.createElement('ul');
+	      
+	      // Add each paragraph content as a list item
+	      paragraphs.forEach(paragraph => {
+	        const li = document.createElement('li');
+	        li.innerHTML = paragraph.innerHTML;
+	        ul.appendChild(li);
+	      });
+	      
+	      // Replace the contents of the timeline body
+	      body.innerHTML = '';
+	      body.appendChild(ul);
+	    }
+	  });
+	});
+	</script>
+
+	<script>
+	// Use a simple approach with moving particles and constellation effect
+	document.addEventListener('DOMContentLoaded', function() {
+		const checkbox = document.getElementById('checkbox');
+		const particlesContainers = document.querySelectorAll('.particles-light');
+		const allParticles = [];
+		
+		function createParticles() {
+			// Clear all particle containers and reset allParticles array
+			particlesContainers.forEach(container => {
+				container.innerHTML = '';
+			});
+			allParticles.length = 0;
+			
+			// Create new particles in each container
+			particlesContainers.forEach(container => {
+				const isDarkMode = checkbox.checked;
+				const particleColor = isDarkMode ? "#1e90ff" : "#3891f0";
+				const particleOpacity = isDarkMode ? 0.15 : 0.1;
+				
+				// Create canvas for container (used for drawing lines)
+				const canvas = document.createElement('canvas');
+				canvas.style.position = 'absolute';
+				canvas.style.top = '0';
+				canvas.style.left = '0';
+				canvas.style.width = '100%';
+				canvas.style.height = '100%';
+				canvas.style.pointerEvents = 'none';
+				canvas.width = container.offsetWidth;
+				canvas.height = container.offsetHeight;
+				container.appendChild(canvas);
+				
+				// Container particles collection
+				const containerParticles = [];
+				
+				// Create visible particles
+				// Calculate number of particles based on container size with different density per section
+				const containerWidth = container.offsetWidth;
+				const containerHeight = container.offsetHeight;
+				const containerArea = containerWidth * containerHeight;
+				
+				// Adjust particles density based on section
+				let particleCount;
+				if (container.closest('#fh5co-about')) {
+					// Higher density for the About Me section (top content section)
+					particleCount = Math.min(80, Math.max(30, Math.floor(containerArea / 8000))); // Keep higher density for About Me
+				} else if (container.closest('#fh5co-started')) {
+					// Fewer particles for Let's Connect section
+					particleCount = Math.min(30, Math.max(15, Math.floor(containerArea / 25000))); // Lower density for Let's Connect
+				} else if (container.closest('#fh5co-footer')) {
+					// Much fewer particles for footer
+					particleCount = Math.min(12, Math.max(6, Math.floor(containerArea / 40000))); // Very low density for footer
+				} else {
+					// Lower density for other sections (Timeline, etc.)
+					particleCount = Math.min(60, Math.max(20, Math.floor(containerArea / 12000))); // Medium density for other sections
+				}
+				
+				for (let i = 0; i < particleCount; i++) {
+					const particle = document.createElement('div');
+					
+					// Random position
+					const x = Math.random() * 100;
+					const y = Math.random() * 100;
+					
+					// Random velocity (very slow)
+					const vx = (Math.random() - 0.5) * 0.02;
+					const vy = (Math.random() - 0.5) * 0.02;
+					
+					// Size 1.5-2.5px
+					const size = 1.5 + Math.random();
+					
+					// Style the particle
+					particle.style.position = 'absolute';
+					particle.style.top = y + '%';
+					particle.style.left = x + '%';
+					particle.style.width = size + 'px';
+					particle.style.height = size + 'px';
+					particle.style.borderRadius = '50%';
+					particle.style.backgroundColor = particleColor;
+					particle.style.opacity = (Math.random() * 0.15 + 0.25).toString(); // Higher opacity (0.25-0.4)
+					particle.style.transition = 'top 2s linear, left 2s linear';
+					
+					// Add to DOM
+					container.appendChild(particle);
+					
+					// Track particle data for animation
+					const particleData = {
+						element: particle,
+						x: x,
+						y: y,
+						vx: vx,
+						vy: vy,
+						container: container,
+						size: size
+					};
+					
+					containerParticles.push(particleData);
+					allParticles.push(particleData);
+				}
+				
+				// Attach the particles and canvas to the container
+				container.particleCanvas = canvas;
+				container.particles = containerParticles;
+			});
+			
+			// Start animation
+			if (!window.animationStarted) {
+				window.animationStarted = true;
+				animateParticles();
+			}
+		}
+		
+		// Animation function
+		function animateParticles() {
+			particlesContainers.forEach(container => {
+				if (!container.particles || !container.particleCanvas) return;
+				
+				const particles = container.particles;
+				const canvas = container.particleCanvas;
+				
+				// Clear the canvas
+				const ctx = canvas.getContext('2d');
+				ctx.clearRect(0, 0, canvas.width, canvas.height);
+				
+				// Update particle positions
+				particles.forEach(particle => {
+					// Update position
+					particle.x += particle.vx;
+					particle.y += particle.vy;
+					
+					// Bounce off edges
+					if (particle.x < 0 || particle.x > 100) particle.vx *= -1;
+					if (particle.y < 0 || particle.y > 100) particle.vy *= -1;
+					
+					// Apply position
+					particle.element.style.left = particle.x + '%';
+					particle.element.style.top = particle.y + '%';
+				});
+				
+				// Draw connecting lines
+				ctx.strokeStyle = particles[0] ? particles[0].element.style.backgroundColor : '#3891f0';
+				ctx.globalAlpha = 0.25;
+				ctx.lineWidth = 0.6;
+				
+				// Draw lines between nearby particles
+				for (let i = 0; i < particles.length; i++) {
+					for (let j = i + 1; j < particles.length; j++) {
+						const dx = (particles[i].x - particles[j].x) * canvas.width / 100;
+						const dy = (particles[i].y - particles[j].y) * canvas.height / 100;
+						const distance = Math.sqrt(dx * dx + dy * dy);
+						
+						// Different connection distances for different sections
+						let maxDistance = 250; // Default (reduced from 300)
+						
+						// Section-specific connection distances
+						if (container.closest('#fh5co-about')) {
+							maxDistance = 280; // Longer connections in About Me section
+						} else if (container.closest('#fh5co-footer')) {
+							maxDistance = 120; // Much shorter connections in footer
+						}
+						
+						// Connect particles within specified distance
+						if (distance < maxDistance) {
+							// Fade line based on distance with higher opacity
+							ctx.globalAlpha = 0.25 * (1 - distance / maxDistance);
+							
+							ctx.beginPath();
+							ctx.moveTo(particles[i].x * canvas.width / 100, particles[i].y * canvas.height / 100);
+							ctx.lineTo(particles[j].x * canvas.width / 100, particles[j].y * canvas.height / 100);
+							ctx.stroke();
+						}
+					}
+				}
+			});
+			
+			// Continue animation
+			requestAnimationFrame(animateParticles);
+		}
+		
+		// Create particles initially
+		createParticles();
+		
+		// Update on dark mode toggle
+		checkbox.addEventListener('change', createParticles);
+		
+		// Update on window resize
+		window.addEventListener('resize', function() {
+			particlesContainers.forEach(container => {
+				if (container.particleCanvas) {
+					container.particleCanvas.width = container.offsetWidth;
+					container.particleCanvas.height = container.offsetHeight;
+				}
+			});
+		});
+	});
+	</script>
 
 	</body>
 </html>
